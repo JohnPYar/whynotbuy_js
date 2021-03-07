@@ -24,4 +24,6 @@ $(document).ready(function () {
             $('label input[value=cash]').parent().show();
         }
     })
+
+
 })
