@@ -1,11 +1,12 @@
 $(document).ready(function () {
     // по умолчанию скрываем способ оплаты для регионов за наличные
-    $('label input [value=cash]').hide();
+    $('label input[value=cash]').parent().hide();
 
     // список городов для добавления способа оплаты Наличные
     const cities = [
         'г Москва',
-        'г Щелково'
+        'г Щелково',
+        // 'г Ярославль'
     ]
 
     //    получаем знаечение выбранного по умолчанию города
@@ -20,7 +21,7 @@ $(document).ready(function () {
 //  проверяем значение города по умолчанию
     $.each(cities, function (index, value) {
         if (value == city) {
-
+            $('label input[value=cash]').parent().show();
         }
     })
 })
